@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Simulador Financeiro </title>
+
+</head>
+<body style="background-color: silver">
+  
+
+                <div style="background:lightslategray; margin-top: 5%;width: 40%;margin-left: 30%;border-style: solid">
+                <h2> <span style="margin-left: 30%">Cálculo do prejuizo</span> </h2>
+
+               <p>
+               <b>Quantas vacas leiteiras voce tem?  </b> 
+               <br>  <input id="vacas"; style= "margin-left: 33%" autofocus> 
+            </p>
+            <p>
+              <b>Quantos litros de leite por dia uma vaca em média faz? </b><input id="litro"; style = "margin-left: 33%"> 
+            </p>
+            <p>    
+              <b>Quanto é o litro do leite? </b>
+              <br><input id="valor_leite"style= "margin-left: 33%">
+             </p>
+               
+                    <p style="margin-left: 45%">
+                 <button onclick="calcular()"> <b> Calcular </b></button> 
+                </p>
+                </div>
+                    <div id="div_mensagem" style="display: none; margin-top: 5%;width: 40%;margin-left: 30%;background-color: lightslategray; border-style: solid">
+                            <ul>
+                             <b> <li> Á quantidade de prejuizo é de R$ <span id="perda1"></span> reais por mês</li></b>
+                             <b> <li>E nossa mensalidade é de R$ <span id="mensalidade1"></span> reais por mês. </li></b>
+                            <b><li>A quantidade media perdida por ano de leite é de R$<span id="perda2"></span> reais.</li></b>
+                            
+                    </ul>
+                    </div>
+
+    
+</body>
+</html>
+<script>
+                function calcular(){
+                var valor_fixo= 1* vacas.value;
+        
+        
+        
+        
+                var valor_ano = (valor_leite.value *litro.value) * 365;
+                var valor_perda_ano = valor_ano * 0.15
+                var valor_ano_total = valor_perda_ano*vacas.value;
+                var valor_leite_mensal = valor_ano /12;
+                var valor_perda_mensal =valor_leite_mensal * 0.15;
+                var perda_total_mes = valor_perda_mensal * vacas.value;
+        
+                perda1.innerHTML= perda_total_mes.toFixed(2);
+                mensalidade1.innerHTML= valor_fixo;
+                perda2.innerHTML = valor_ano_total.toFixed(2);
+        
+        
+        
+                 div_mensagem.style.display = 'block';
+                }
+        </script>
