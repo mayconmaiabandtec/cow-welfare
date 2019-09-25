@@ -1,0 +1,52 @@
+/* Como criar Menu de navegação utilizando css*/
+
+nav ul {
+    margin: 00%;
+    width: 100;
+    background-color: black;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+
+/*alterando cor do texto, margem, distância, tirando o  
+    sublinhado que fica quando normalmente se cria um menu
+    e tirando a decoração padrão dos textos (roxa)*/
+
+nav ul li a {
+    padding: 15px 10px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-family: cursive;
+}
+
+
+/* Alterar cor quando passar o mouse em cima da opção*/
+
+nav ul li a:hover {
+    color: lightblue;
+}
+
+body {
+    background-image: url("./grama\ verde.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-color: transparent;
+    background-color: rgba(105, 105, 105, 0.2);
+}
+
+#textos {
+    color: white;
+    font-size: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+nav ul div {
+    float: right;
+}
